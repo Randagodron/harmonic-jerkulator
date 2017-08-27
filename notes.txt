@@ -1,0 +1,6 @@
+A acheter:
+
+- connecteur inter-cartes long (au moins 15mm)
+- jacks fins, CLIFF S1 / FCR11155 / FCR50051 ou pro signal MX
+- capa 22u electrolythique, plat (moins que 7.45mm)
+- switch SPDT 3 pos. pins longues (au moins 10mm)
