@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:flax_lib
 LIBS:harmonic_jerkulator-cache
 EELAYER 25 0
 EELAYER END
@@ -130,7 +131,7 @@ U 1 1 599CA1FA
 P 1200 3800
 F 0 "J103" H 1200 3995 50  0000 C CNN
 F 1 "CONN_PSU" H 1200 3645 50  0000 C CNN
-F 2 "Connect:JACK_ALIM" H 1200 3800 50  0001 C CNN
+F 2 "Connect:BARREL_JACK" H 1200 3800 50  0001 C CNN
 F 3 "" H 1200 3800 50  0001 C CNN
 	1    1200 3800
 	1    0    0    -1  
@@ -166,7 +167,7 @@ F 1 "GAIN" V 1400 6400 50  0000 C CNN
 F 2 "flax_lib:ALPS_RK09L" H 1500 6400 50  0001 C CNN
 F 3 "" H 1500 6400 50  0001 C CNN
 	1    1500 6400
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L C C101
@@ -463,7 +464,7 @@ F 1 "VOLUME" V 5800 6400 50  0000 C CNN
 F 2 "flax_lib:ALPS_RK09L" H 5900 6400 50  0001 C CNN
 F 3 "" H 5900 6400 50  0001 C CNN
 	1    5900 6400
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L R R109
@@ -1215,4 +1216,18 @@ Wire Wire Line
 Wire Wire Line
 	10500 5900 10400 5900
 Connection ~ 10400 5900
+$Comp
+L GND #PWR030
+U 1 1 59A57141
+P 1600 3600
+F 0 "#PWR030" H 1600 3350 50  0001 C CNN
+F 1 "GND" H 1600 3450 50  0000 C CNN
+F 2 "" H 1600 3600 50  0001 C CNN
+F 3 "" H 1600 3600 50  0001 C CNN
+	1    1600 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1600 3600 1600 3700
+Connection ~ 1600 3700
 $EndSCHEMATC

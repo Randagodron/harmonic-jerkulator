@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:flax_lib
 LIBS:harmonic_jerkulator-cache
 EELAYER 25 0
 EELAYER END
@@ -130,7 +131,7 @@ U 1 1 599CA1FA
 P 1200 3800
 F 0 "J103" H 1200 3995 50  0000 C CNN
 F 1 "CONN_PSU" H 1200 3645 50  0000 C CNN
-F 2 "Connect:JACK_ALIM" H 1200 3800 50  0001 C CNN
+F 2 "Connect:BARREL_JACK" H 1200 3800 50  0001 C CNN
 F 3 "" H 1200 3800 50  0001 C CNN
 	1    1200 3800
 	1    0    0    -1  
@@ -491,9 +492,9 @@ Text Label 1500 6100 1    60   ~ 0
 FX_IN_B
 Text Label 6200 6400 0    60   ~ 0
 FX_OUT_B
-Text Label 10300 5500 2    60   ~ 0
-FX_IN_B
 Text Label 10300 5700 2    60   ~ 0
+FX_IN_B
+Text Label 10300 5800 2    60   ~ 0
 FX_OUT_B
 Text Label 10300 5300 2    60   ~ 0
 LED_CMD_B
@@ -687,9 +688,9 @@ Text Label 4250 5700 0    60   ~ 0
 SW_DIODE_1B
 Text Label 4250 5800 0    60   ~ 0
 SW_DIODE_2B
-Text Label 10300 5600 2    60   ~ 0
+Text Label 10300 5500 2    60   ~ 0
 SW_DIODE_1B
-Text Label 10300 5800 2    60   ~ 0
+Text Label 10300 5600 2    60   ~ 0
 SW_DIODE_2B
 Text Label 10300 2400 2    60   ~ 0
 SW_DIODE_1A
@@ -1215,4 +1216,18 @@ Wire Wire Line
 Wire Wire Line
 	10500 5900 10400 5900
 Connection ~ 10400 5900
+$Comp
+L GND #PWR?
+U 1 1 59A57141
+P 1600 3600
+F 0 "#PWR?" H 1600 3350 50  0001 C CNN
+F 1 "GND" H 1600 3450 50  0000 C CNN
+F 2 "" H 1600 3600 50  0001 C CNN
+F 3 "" H 1600 3600 50  0001 C CNN
+	1    1600 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1600 3600 1600 3700
+Connection ~ 1600 3700
 $EndSCHEMATC
