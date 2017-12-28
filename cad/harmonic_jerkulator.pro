@@ -1,4 +1,4 @@
-update=Thu 31 Aug 2017 18:26:20 CEST
+update=25/12/2017 14:37:09
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,6 +23,8 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
@@ -56,6 +58,4 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=C:/Users/Florian/Documents/dev/kicad/lib/kicad_flax_lib/flax_lib/flax_lib
-[general]
-version=1
+LibName30=C:/Users/sylvain/Documents/dev/kicad/flax_lib/flax_lib

@@ -137,28 +137,6 @@ F 3 "" H 1200 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X08 J111
-U 1 1 599CA674
-P 10700 2450
-F 0 "J111" H 10700 2900 50  0000 C CNN
-F 1 "CONN_CONN_BOARD" V 10800 2450 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 10700 2450 50  0001 C CNN
-F 3 "" H 10700 2450 50  0001 C CNN
-	1    10700 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_01X08 J113
-U 1 1 599CA9F3
-P 10700 5550
-F 0 "J113" H 10700 6000 50  0000 C CNN
-F 1 "CONN_CIRCUIT_BOARD" V 10800 5550 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 10700 5550 50  0001 C CNN
-F 3 "" H 10700 5550 50  0001 C CNN
-	1    10700 5550
-	1    0    0    -1  
-$EndComp
-$Comp
 L POT RV101
 U 1 1 599CABB6
 P 1500 6400
@@ -492,9 +470,9 @@ Text Label 1500 6100 1    60   ~ 0
 FX_IN_B
 Text Label 6200 6400 0    60   ~ 0
 FX_OUT_B
-Text Label 10300 5700 2    60   ~ 0
+Text Label 10300 5500 2    60   ~ 0
 FX_IN_B
-Text Label 10300 5800 2    60   ~ 0
+Text Label 10300 5600 2    60   ~ 0
 FX_OUT_B
 Text Label 10300 5300 2    60   ~ 0
 LED_CMD_B
@@ -555,9 +533,9 @@ F 3 "" H 10400 2900 50  0001 C CNN
 	1    10400 2900
 	1    0    0    -1  
 $EndComp
-Text Label 10300 2600 2    60   ~ 0
+Text Label 10300 2400 2    60   ~ 0
 FX_IN_A
-Text Label 10300 2700 2    60   ~ 0
+Text Label 10300 2500 2    60   ~ 0
 FX_OUT_A
 $Comp
 L VAA #PWR011
@@ -673,29 +651,10 @@ F 3 "" H 8800 2000 50  0001 C CNN
 $EndComp
 NoConn ~ 8200 1400
 NoConn ~ 8200 1200
-$Comp
-L CONN_01X02 J109
-U 1 1 599D80DD
-P 5100 5750
-F 0 "J109" H 5100 5900 50  0000 C CNN
-F 1 "SW_DIODE" V 5200 5750 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 5100 5750 50  0001 C CNN
-F 3 "" H 5100 5750 50  0001 C CNN
-	1    5100 5750
-	1    0    0    -1  
-$EndComp
+Text Label 4250 5600 0    60   ~ 0
+SW_DIODE_1B
 Text Label 4250 5700 0    60   ~ 0
-SW_DIODE_1B
-Text Label 4250 5800 0    60   ~ 0
 SW_DIODE_2B
-Text Label 10300 5500 2    60   ~ 0
-SW_DIODE_1B
-Text Label 10300 5600 2    60   ~ 0
-SW_DIODE_2B
-Text Label 10300 2400 2    60   ~ 0
-SW_DIODE_1A
-Text Label 10300 2500 2    60   ~ 0
-SW_DIODE_2A
 $Comp
 L VSS #PWR021
 U 1 1 599DA718
@@ -765,22 +724,6 @@ Text Label 5800 2300 2    60   ~ 0
 AUDIO_IN
 Text Label 5800 2600 2    60   ~ 0
 AUDIO_OUT
-$Comp
-L CONN_01X03 J112
-U 1 1 599E0F67
-P 10700 3400
-F 0 "J112" H 10700 3600 50  0000 C CNN
-F 1 "SW_DIODE" V 10800 3400 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 10700 3400 50  0001 C CNN
-F 3 "" H 10700 3400 50  0001 C CNN
-	1    10700 3400
-	1    0    0    -1  
-$EndComp
-Text Label 10400 3300 2    60   ~ 0
-SW_DIODE_1A
-Text Label 10400 3400 2    60   ~ 0
-SW_DIODE_2A
-NoConn ~ 10500 3500
 Text Label 1900 1300 0    60   ~ 0
 AUDIO_IN
 Text Label 1700 2100 0    60   ~ 0
@@ -855,9 +798,9 @@ Wire Wire Line
 	4350 6600 4200 6600
 Connection ~ 4200 6600
 Wire Wire Line
-	4200 6200 4200 5800
+	4200 5700 4200 6200
 Wire Wire Line
-	4200 5800 4900 5800
+	4200 5700 4900 5700
 Wire Wire Line
 	4350 6300 4350 6100
 Wire Wire Line
@@ -894,9 +837,7 @@ Wire Wire Line
 Wire Wire Line
 	5900 5500 3650 5500
 Wire Wire Line
-	4200 5700 4900 5700
-Wire Wire Line
-	4200 5700 4200 5500
+	4200 5600 4900 5600
 Connection ~ 4200 5500
 Wire Wire Line
 	3200 5500 3350 5500
@@ -983,8 +924,6 @@ Wire Wire Line
 Wire Wire Line
 	9700 5500 10500 5500
 Wire Wire Line
-	9700 5700 10500 5700
-Wire Wire Line
 	8000 4900 8000 5000
 Wire Wire Line
 	8000 5300 8000 5400
@@ -1001,8 +940,6 @@ Wire Wire Line
 Wire Wire Line
 	9700 2400 10500 2400
 Wire Wire Line
-	9700 2600 10500 2600
-Wire Wire Line
 	9800 1100 9800 1200
 Wire Wire Line
 	9800 700  9800 800 
@@ -1013,11 +950,7 @@ Wire Wire Line
 Wire Wire Line
 	10500 5600 9700 5600
 Wire Wire Line
-	10500 5800 9700 5800
-Wire Wire Line
 	10500 2500 9700 2500
-Wire Wire Line
-	9700 2700 10500 2700
 Wire Wire Line
 	5700 1850 5700 1900
 Wire Wire Line
@@ -1038,13 +971,13 @@ Connection ~ 4900 1300
 Wire Wire Line
 	4900 1700 4900 1900
 Wire Wire Line
-	4400 1200 4400 1300
+	4400 1200 4400 1500
 Wire Wire Line
 	4400 1300 4500 1300
 Wire Wire Line
 	4200 1300 4300 1300
 Wire Wire Line
-	4300 1300 4300 1200
+	4300 1200 4300 1500
 Wire Wire Line
 	5500 2800 5900 2800
 Wire Wire Line
@@ -1066,10 +999,6 @@ Wire Wire Line
 	5900 2300 5300 2300
 Wire Wire Line
 	5900 2600 5300 2600
-Wire Wire Line
-	10500 3400 9800 3400
-Wire Wire Line
-	10500 3300 9800 3300
 Wire Wire Line
 	1600 1300 2200 1300
 Wire Wire Line
@@ -1205,17 +1134,11 @@ Wire Wire Line
 Wire Wire Line
 	10400 2300 10400 2900
 Wire Wire Line
-	10500 2800 10400 2800
-Connection ~ 10400 2800
-Wire Wire Line
 	10500 5300 9700 5300
 Wire Wire Line
 	10500 5400 10400 5400
 Wire Wire Line
 	10400 5400 10400 6000
-Wire Wire Line
-	10500 5900 10400 5900
-Connection ~ 10400 5900
 $Comp
 L GND #PWR030
 U 1 1 59A57141
@@ -1230,4 +1153,67 @@ $EndComp
 Wire Wire Line
 	1600 3600 1600 3700
 Connection ~ 1600 3700
+$Comp
+L Conn_01x06 J111
+U 1 1 5A410A19
+P 10700 2300
+F 0 "J111" H 10700 2600 50  0000 C CNN
+F 1 "Conn_01x06" H 10700 1900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 10700 2300 50  0001 C CNN
+F 3 "" H 10700 2300 50  0001 C CNN
+	1    10700 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 2600 10400 2600
+Connection ~ 10400 2600
+$Comp
+L C C107
+U 1 1 5A411408
+P 4350 1700
+F 0 "C107" H 4375 1800 50  0000 L CNN
+F 1 "100n" H 4375 1600 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4388 1550 50  0001 C CNN
+F 3 "" H 4350 1700 50  0001 C CNN
+	1    4350 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4500 1700 4500 1500
+Wire Wire Line
+	4500 1500 4400 1500
+Connection ~ 4400 1300
+Wire Wire Line
+	4300 1500 4200 1500
+Wire Wire Line
+	4200 1500 4200 1700
+Connection ~ 4300 1300
+$Comp
+L Conn_01x06 J113
+U 1 1 5A4124BB
+P 10700 5400
+F 0 "J113" H 10700 5700 50  0000 C CNN
+F 1 "Conn_01x06" H 10700 5000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 10700 5400 50  0001 C CNN
+F 3 "" H 10700 5400 50  0001 C CNN
+	1    10700 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 5700 10400 5700
+Connection ~ 10400 5700
+Wire Wire Line
+	4200 5600 4200 5500
+$Comp
+L Conn_01x03 J109
+U 1 1 5A413622
+P 5100 5700
+F 0 "J109" H 5100 5900 50  0000 C CNN
+F 1 "DIODE_SW" H 5100 5500 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 5100 5700 50  0001 C CNN
+F 3 "" H 5100 5700 50  0001 C CNN
+	1    5100 5700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4900 5800
 $EndSCHEMATC
