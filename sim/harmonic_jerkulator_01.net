@@ -1,0 +1,41 @@
+* C:\Users\Florian\Documents\dev\stomp\harmonic_jerkulator\sim\harmonic_jerkulator_01.asc
+R1 N010 0 1k
+R2 N007 N010 {100k*GAIN}
+R3 vin N007 {100k*(1-GAIN)}
+vcc vcc 0 9
+vsin vsin 0 SINE(0 100m 1k)
+venv venv 0 PWL(0 0.001 200m 0.999)
+C1 N008 N007 22n
+Q1 N009 N008 N005 0 2N3906
+Q2 N002 N001 N005 0 2N3904
+C2 N005 0 22µ
+R4 N009 0 22k
+C3 N001 N009 47n
+R5 N002 N001 100k
+R6 N009 N008 1Meg
+R7 vcc N002 22k
+C4 N003 N002 100n
+R8 vout 0 {100k*VOLUME}
+R9 N004 vout {100k*(1-VOLUME)}
+B1 vin 0 V=V(venv)*V(vsin)
+V1 NC_01 0 SINE(0 100m 1k) AC 100m
+R10 N004 N003 100k
+V2 N011 0 wavefile=.\guit_sample_01.wav chan=0
+D1 0 N003 1N4148
+D2 N003 N006 1N4148
+R11 N006 0 1k
+C5 N003 0 1n
+.model D D
+.lib C:\Users\Florian\Documents\LTspiceXVII\lib\cmp\standard.dio
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\Florian\Documents\LTspiceXVII\lib\cmp\standard.bjt
+.param GAIN=0.5
+.param VOLUME=0.5
+.tran 200m
+;ac oct 10 10 40k
+.wave .\harmonic_jerkulator.wav 16 44100 V(vout)
+.MODEL 1N34A D( bv=75 cjo=0.5e-12 eg=0.67 ibv=18e-3 is=2e-7 rs=7 n=1.3 vj=0.1 m=0.27 type=germanium)
+.op
+.backanno
+.end

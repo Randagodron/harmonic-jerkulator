@@ -1,4 +1,4 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.7)
+(kicad_pcb (version 4) (host pcbnew 4.0.6)
 
   (general
     (links 91)
@@ -83,7 +83,7 @@
       (plotinvisibletext false)
       (padsonsilk false)
       (subtractmaskfromsilk false)
-      (outputformat 1)
+      (outputformat 5)
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
